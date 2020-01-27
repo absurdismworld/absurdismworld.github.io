@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      THE Rock Paper Scissors 
+    </title>
+    <link href="rps.css" rel="stylesheet">
+    <script src="rps.js"></script>
+  </head>
+  <body>
+    <!-- [THE GAME WRAPPER] -->
+    <h1>
+      ROCK, PAPER, SCISSORS!
+    </h1>
+    <div id="rps-game">
+      <!-- [YOUR MOVE] -->
+      <div id="rps-you">
+        <h2>YOUR MOVE</h2>
+        <div id="rps-you-move"></div>
+        <select id="rps-you-sel" disabled>
+          <option value="rock">Rock</option>
+          <option value="paper">Paper</option>
+          <option value="scissors">Scissors</option>
+        </select>
+        <input id="rps-you-go" type="button" value="Go!" disabled/>
+      </div>
+
+      <!-- [COMPUTER'S MOVE] -->
+      <div id="rps-com">
+        <h2>COMPUTER'S MOVE</h2>
+        <div id="rps-com-move"></div>
+      </div>
+    </div>
+    
+    <!-- [SCOREBOARD] -->
+    <div id="rps-score">
+      Win - <span id="rps-win">0</span> |
+      Lose - <span id="rps-lose">0</span> |
+      Draw - <span id="rps-draw">0</span>
+    </div>
+  </body>
+</html>

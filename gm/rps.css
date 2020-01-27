@@ -1,0 +1,50 @@
+/* [GAME WRAPPER] */
+#rps-game {
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+#rps-you, #rps-com {
+  padding: 15px;
+  text-align: center;
+}
+
+/* [ROCK/PAPER/SCISSORS IMAGE] */
+#rps-you-move, #rps-com-move {
+  height: 200px;
+  margin-bottom: 10px;
+}
+#rps-game img {
+  width: auto;
+  height: 200px;
+}
+
+/* [YOUR MOVE] */
+#rps-you {
+  background: #ffdada;
+}
+#rps-you-sel, #rps-you-go {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border: 0;
+  float: left;
+}
+#rps-you-sel { width: 70%; }
+#rps-you-go { width: 30%; }
+
+/* [COMPUTER'S MOVE] */
+#rps-com {
+  background: #dcffdc;
+}
+
+/* [SCOREBOARD] */
+#rps-score {
+  margin-top: 10px;
+}
+
+/* [DOES NOT MATTER] */
+html, body {
+  font-family: arial, sans-serif;
+}
