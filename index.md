@@ -1,3 +1,3 @@
 Active projects: N/A
 
-Abandoned projects: [tba](absurdismworld.github.io)
+Abandoned projects: [Demontower Standalone](https://absurdismworld.github.io/DemontowerStandalone/)
