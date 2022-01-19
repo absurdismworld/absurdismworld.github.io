@@ -1,0 +1,59 @@
+.container {
+    display: block;
+    position: relative;
+    width: 20rem;
+    height: 11.25rem;
+}
+.inner-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: .1rem .1rem .5rem rgba(0,0,0,0.25);
+}
+#border-image {
+    display: none;
+}
+.display {
+    display: block;
+    margin: auto;
+    background: blue;
+    width: 20rem;
+    height: 11.25rem;
+}
+#overlay {
+    display: block;
+    position: absolute;
+    width: 20rem;
+    height: 11.25rem;
+    transition: opacity 200ms;
+    opacity: 80%;
+    background-image: url("../img/noise.gif");
+    animation: noise 3s linear infinite;
+}
+#player {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: .1rem;
+}
+#start-button {
+    content: "Watch";
+    display: block;
+    position: absolute;
+    z-index: 1500;
+    font-family: Rubik;
+    font-size: 1.2rem;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.0));
+    border: none;
+    border-top: solid .12rem rgb(40,40,40);
+    cursor: pointer;
+    left: 5.5rem;
+    right: 5.5rem;
+    text-align: center;
+    color: black;
+}
+.settings-scroller {
+    overflow-y: auto;
+    height: 5.5rem;
+}
