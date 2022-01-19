@@ -3,23 +3,63 @@
 <head>
     <title>AbsurdTV embed</title>
     <meta name="description" content="AbsurdTV">
-    <link rel="stylesheet" href="./data/css/player-style.css">
+    <link rel="stylesheet" href="./data/css/main-style.css">
+    <link id="theme-apply" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <div class="inner-container">
-            <img id="crt" src="./data/img/crt-border.png">
+            <img id="border-image">
             <div class="display">
                 <div id="overlay">
                     <audio id="noise-audio" src="./data/audio/noise.wav" loop></audio>
+                    <audio id="noisefade-audio" src="./data/audio/noise-fadeout.wav"></audio>
                 </div>
                 <video id="player">AbsurdTV</video>
-                
             </div>
-            
+            <div class="settings-menu" id="settings-menu">
+                <div class="settings-inner">
+                    <span id="currentlyknown">Currently known videos: </span>
+                    <span>Settings</span><br>
+                    <hr color="white">
+                    <div class="settings-scroller">
+                        <table id="settings-table">
+                            <div class="setting-style">
+                                <tr>
+                                    <td class="set-1">Audio noise</td>
+                                    <td><input id="setting-noise-sound" type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td class="set-1">Visual noise</td>
+                                    <td><input id="setting-noise-visual" type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td class="set-1">Autoplay</td>
+                                    <td><input id="setting-autoplay" type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>Show default video UI</td>
+                                    <td><input id="setting-default-ui" type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="set-1">Theme</td>
+                                    <td>
+                                        <select name="Themes" id="theme-select">  
+                                            <option value="theme-crt">CRT-TV</option>  
+                                            <option value="theme-simple-169">Simple 16:9</option>
+                                            <option value="theme-simple-43">Simple 4:3</option>   
+                                        </select>  
+                                    </td>
+                                </tr>
+                            </div>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button id="start-button">Watch</button>
+        <div id="start-button">Watch</div>
+        <button id="settings-button">Settings</button>
     </div>
 </body>
 <script type="text/javascript" src="./data/js/player.js"></script>
