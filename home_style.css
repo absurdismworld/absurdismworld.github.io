@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Syne+Mono&display=swap');
+body {
+    font-size: 35px;
+    background-image: url("./bg3.png");
+    animation: scroll 14s infinite;
+    animation-timing-function: linear;
+}
+.topbar {
+    display: block;
+    width: 80%;
+    margin: 1.5rem auto .8rem;
+    text-align: center;
+    background-image: linear-gradient(gray, lightgray);
+    border-style: groove;
+    box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.1) inset;
+}
+.topbar span {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+#title {
+    font-family: Syne Mono;
+    margin: .1rem;
+    user-select: none;
+    color: white;
+    text-shadow: .1rem .1rem gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: widen 2s infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+.buttons {
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
+.links {
+    font-family: Roboto Slab;
+    color: white;
+    display: inline-block;
+    border-style: none;
+    padding: .35rem;
+    text-decoration: none;
+}
+.links:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+.entertheabsurd {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    background-image: url("./bg.png");
+    width: 45rem;
+    height: 5rem;
+    box-shadow: 0px 0px 1rem rgba(0,0,0,0.4) inset;
+    justify-content: center;
+    border-radius: .4rem;
+    mix-blend-mode:difference;
+    transition: filter 200ms;
+    margin-top: 150px;
+}
+.entertheabsurd:hover {
+    filter:brightness(3);
+    box-shadow: 0px 0px 4rem rgba(255, 0, 149, 0.096);
+}
+.credits {
+    font-family: monospace;
+    font-size: 1rem;
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    text-decoration: none !important;
+}
+.credits a {
+    text-decoration: none;
+    color: inherit;
+}
+.credits a:hover {
+    text-decoration: underline;
+
+}
+#enter {
+    font-family: monospace;
+    font-weight: 100;
+    margin: 0px;
+    text-decoration: none;
+    font-size: 3rem;
+    color: rgb(51, 0, 99);
+    text-shadow: 1px 0px rgba(0,255,0,0.1);
+    mix-blend-mode:lighten;
+    transition: letter-spacing 200ms;
+    transition-timing-function: steps(4);
+}
+#enter:hover {
+    letter-spacing: .2rem;
+}
+#play {
+    display: inline-block;
+    color: white;
+}
+#play:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.popwindow {
+    position: absolute;
+    border-style: groove;
+    border-top-width: 8px;
+    border-width: 4px;
+    background-image: linear-gradient(lightgray, gray);
+}
+.popwindow #poptitle {
+    color: white;
+    font-family: monospace;
+    margin: .4rem;
+    border: inset 2px gray
+}
+.minibar {
+    display: block;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+#screensize {
+    color: white;
+    display: inline-block;
+    margin: auto auto 1rem;
+    text-align: center;
+}
+@keyframes widen {
+    from {
+        filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.5));
+    }
+    to {
+    }
+}
+@keyframes scroll {
+    from {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    to {
+        background-position-x: 1096px;
+        background-position-y: 518px;
+
+    }
+}
+@media (min-width: 1400px) {
+    #screensize::after {
+        content: "Perfect";
+        color: rgb(46, 255, 46);
+    }
+}
+@media (max-width: 1400px) {
+    #screensize::after {
+        content: "Good";
+        color: lightgreen;
+    }
+}
+@media (max-width: 1000px) {
+    #screensize::after {
+        content: "Pretty small";
+        color: lightgray;
+    }
+    .entertheabsurd {
+        width: 30rem;
+    }
+    #enter {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+    }
+    #screensize::after {
+        content: "Tiny";
+        color: lightsalmon;
+    }
+    .entertheabsurd {
+        width: 25rem;
+    }
+    #enter {
+        font-size: 1.7rem;
+    }
+    #title {
+        font-size: 2.9rem;
+    }
+    .topbar {
+        margin: 0px;
+        width: 98.99%;
+    }
+}
+@media (max-width: 300px) {
+    #screensize::after {
+        content: "Minuscule";
+    }
+}
+@media (max-width: 100px) {
+    #screensize::after {
+        content: "This is just you testing";
+    }
+}
