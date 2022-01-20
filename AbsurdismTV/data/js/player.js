@@ -95,6 +95,8 @@ var linksInit = [
 		"./data/database/77.mp4",
 		"./data/database/78.mp4",
 		"./data/database/79.mp4",
+		"./data/database/80.mp4",
+		"./data/database/81.mp4",
     "https://cdn.discordapp.com/attachments/932231434142375966/932390379855163452/IMG_3780.mp4",
     "https://cdn.discordapp.com/attachments/932231434142375966/932377829470011452/WhatsApp_Video_2022-01-17_at_00.54.58.mp4",
     "https://cdn.discordapp.com/attachments/932231434142375966/932234910918381588/redditsave.com_1010-suk3w6qa2r371.mp4",
