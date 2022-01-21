@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&family=Rubik:wght@300&display=swap');
 html {
     font-size: 35px;
+    background-image: linear-gradient(black, rgb(10,10,30));
 }
 body {
+    height: 100vh;
     background:rgba(0,0,0,0);
     display: flex;
     flex-direction: row;
     justify-content: center;
-    justify-items: center;
+    align-items: center
 }
 
 .settings-menu {
@@ -59,7 +61,7 @@ body {
     height: .9rem;
     width: 2rem;
     background-color: transparent;
-    color: black;
+    color: white;
     border: none;
     cursor: pointer;
 }
@@ -68,6 +70,15 @@ body {
 }
 .noise-fade {
     animation: noise 3s linear infinite, noiseTransition 300ms linear !important;
+}
+.lighting {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 2000;
 }
 @keyframes noise {
     from {

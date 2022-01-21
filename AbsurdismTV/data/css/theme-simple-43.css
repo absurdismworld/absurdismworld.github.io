@@ -45,12 +45,12 @@
     font-size: 1.2rem;
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.0));
     border: none;
-    border-top: solid .12rem rgb(40,40,40);
+    border-top: solid .12rem #fcfcfc;
     cursor: pointer;
     left: 5.5rem;
     right: 5.5rem;
     text-align: center;
-    color: black;
+    color: white;
 }
 .settings-scroller {
     overflow-y: auto;
