@@ -19,7 +19,7 @@ body {
     font-weight: 100;
 }
 #title {
-    font-family: Syne Mono;
+    font-family: Love Letter;
     margin: .1rem;
     user-select: none;
     color: white;
@@ -207,3 +207,6 @@ body {
         content: "This is just you testing";
     }
 }
+@font-face {
+  font-family: "Love Letter";
+  src: url('fonts/LoveLetter.ttf') format('truetype');
