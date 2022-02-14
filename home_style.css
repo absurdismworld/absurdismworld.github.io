@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Syne+Mono&display=swap');
+@font-face {
+  font-family: "Love Letter";
+  src: url('fonts/LoveLetter.ttf') format('truetype');
 body {
     font-size: 35px;
     background-image: url("./bg3.png");
@@ -19,7 +22,7 @@ body {
     font-weight: 100;
 }
 #title {
-    font-family: Syne Mono;
+    font-family: Love Letter;
     margin: .1rem;
     user-select: none;
     color: white;
