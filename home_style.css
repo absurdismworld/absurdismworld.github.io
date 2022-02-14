@@ -209,4 +209,4 @@ body {
 }
 @font-face {
   font-family: "Love Letter";
-  src: url('./fontstorage/LoveLetter.ttf') format('truetype');
+  src: url('./fontstorage/LoveLetter.TTF') format('truetype');
