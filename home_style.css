@@ -36,7 +36,7 @@ body {
     margin: auto;
     text-align: center;
     color: white;
-	font-size: 85%;
+	font-size: 90%;
 }
 
 .links {
@@ -217,4 +217,3 @@ a {
 @font-face {
   font-family: "Love Letter";
   src: url('./fontstorage/LoveLetter.TTF') format('truetype');
-r
