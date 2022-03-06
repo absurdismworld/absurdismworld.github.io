@@ -1,0 +1,31 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+<h1>The code to make this look somewhat decent is being worked on.</h1>
+<p>Absurd radio</p>
+<p>Direct link: <a href="http://absurdradio.onthewifi.com:8000/stream.ogg">http://absurdradio.onthewifi.com:8000/stream.ogg</a></p>
+<p>M3U: <a href="http://absurdradio.onthewifi.com:8000/stream.ogg.m3u">http://absurdradio.onthewifi.com:8000/stream.ogg.m3u</a></p>
+<p>XSPF: <a href="http://absurdradio.onthewifi.com:8000/stream.ogg.xspf">http://absurdradio.onthewifi.com:8000/stream.ogg.xspf</a></p>
+
+Current status (this doesn't even work lol i'll replace it with something later, but the radio is offline atm): <p id="status">Checking...</p>
+
+<p>Music of various genres, some of them being: D&B, Vaporwave, EDM and many more.</p>
+<br>
+<p>Most browsers can use the direct link, but it's recommended to use an internet radio compatible player such as VLC.</p>
+
+
+<script>
+	$.ajax({
+            url: "http://absurdradio.onthewifi.com:8000/",
+            type: "dataType",
+            data: "html",
+            success:function(){
+                document.getElementById("status").innerHTML = "null";
+            },
+            error:function(){
+                document.getElementById("status").innerHTML = "null";
+            }
+        });
+</script>
