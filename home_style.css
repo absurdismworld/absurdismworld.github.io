@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Syne+Mono&display=swap');
 body {
     font-size: 35px;
-    background-image: url("./bg3.png");
+    background-image: url("./bg205.gif");
     animation: scroll 14s infinite;
     animation-timing-function: linear;
 }
@@ -29,12 +29,14 @@ body {
     animation: widen 2s infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
+
 }
 .buttons {
     display: block;
     margin: auto;
     text-align: center;
     color: white;
+	font-size: 85%;
 }
 
 .links {
@@ -76,7 +78,12 @@ body {
     position: absolute;
     bottom: 0;
     text-decoration: none !important;
+	
 }
+a {
+  color: inherit;
+}
+
 .credits a {
     text-decoration: none;
     color: inherit;
