@@ -1,0 +1,31 @@
+.videoInsert {
+
+	display: block;
+	margin: auto;
+    position: center; 
+    width: 40%; 
+    height: 40%; 
+    
+}
+
+to {
+    font-family: Love Letter;
+	font-size:225%;
+    color:#d2738a;
+	
+}
+
+ot {
+    font-family: Love Letter;
+	font-size:100%;
+    color:#d2738a;
+	
+}
+
+.center {
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Love Letter";
+  src: url('./LoveLetter.TTF') format('truetype');
