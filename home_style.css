@@ -4,6 +4,10 @@ body {
     background-image: url("./bg205.gif");
     animation: scroll 14s infinite;
     animation-timing-function: linear;
+    image-rendering: pixelated;
+}
+body * {
+    box-sizing: border-box;
 }
 .topbar {
     display: block;
@@ -33,23 +37,68 @@ body {
 }
 .buttons {
     display: block;
-    margin: auto;
+    position: relative;
+    margin: 30px auto;
+    width: 100vw;
+    max-width: 800px;
+    height: 300px;
     text-align: center;
     color: white;
     font-size: 89.99%;
+    border: solid 1px white;
+    filter: drop-shadow(2px 2px 6px rgba(255,255,255,0.7));
+    overflow-y: scroll;
+    background-color: rgba(0,0,0,0.3);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-
+.buttons::-webkit-scrollbar {
+    display: none;
+}
+.bash {
+    font-family: consolas;
+    display: block;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    height: 51px;
+    text-align: start;
+    padding: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .links {
     font-family: Roboto Slab;
     color: white;
-    display: inline-block;
+    display: block;
     border-style: none;
     padding: .35rem;
     text-decoration: none;
+    letter-spacing: 6px;
+    border: groove 1px rgba(255,255,255,0.4);
 }
 .links:hover {
-    text-decoration: underline;
-    text-decoration-color: white;
+    font-weight: bold;
+}
+.links:hover::before {
+    content: ">> ";
+}
+.links:hover::after {
+    content: " <<";
+}
+.foreground {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    position: absolute;
+    opacity: 7%;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    background-image: url("crt.gif");
 }
 .entertheabsurd {
     display: flex;
@@ -64,7 +113,7 @@ body {
     border-radius: .4rem;
     mix-blend-mode:difference;
     transition: filter 200ms;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 .entertheabsurd:hover {
     filter:brightness(3);
@@ -91,6 +140,9 @@ a {
 .credits a:hover {
     text-decoration: underline;
 
+}
+.cur {
+    animation: blink 800ms steps(2) infinite;
 }
 #enter {
     font-family: monospace;
@@ -145,6 +197,14 @@ a {
         filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.5));
     }
     to {
+    }
+}
+@keyframes blink {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
     }
 }
 @keyframes scroll {
@@ -217,3 +277,4 @@ a {
 @font-face {
   font-family: "Love Letter";
   src: url('./fontstorage/LoveLetter.TTF') format('truetype');
+}
