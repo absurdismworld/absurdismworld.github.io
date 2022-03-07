@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="home_style.css">
 </head>
 <body onblur="document.title='absurdismworld'">
+    <div class="foreground">
+        </div>
     <div class="topbar">
         <h1 id="title">/absurdismworld/</h1>
     </div>
@@ -23,17 +25,17 @@
 	<id="quote"> “If you’re not remembered, then you never existed.”
 	</div>
     <div class="buttons">
-		<a class="links" id="About" href="about">About</a>
-        <br><a class="links" id="twitter" href="https://twitter.com/absurdismworld">Twitter</a> - 
-        <a class="links" id="discord" href="discord">Discord</a></br>
-		<a class="links" id="AbsurdismTv" href="./AbsurdismTV/index.html">AbsurdTV</a> -
-		<a class="links" id="archiveproject" href="https://www.youtube.com/c/Absurdismworldsarchivechannel/">Youtube d&b archive</a> - 
-		<a class="links" id="AI" href="./TNADNE/index.html">TNADNE</a> -
-		<a class="links" id="radio" href="radio">Internet radio</a> -
-	    <a class="links" id="archiveproject" href="flashlives">Keep flash alive!</a><br>
-		<a class="links" id="websitebasics" href="flashlives">Website basics</a> -
-		<a class="links" id="webrings" href="flashlives">Webrings & cool websites</a>
-			
+        <span class="bash" id="bash">~$ tip: scroll for more<span class="cur">_</span></span>
+		<a class="links" onmouseover="bash('about')" id="About" href="about">About</a>
+        <a class="links" onmouseover="bash('twitter')" id="twitter" href="https://twitter.com/absurdismworld">Twitter</a>
+        <a class="links" onmouseover="bash('discord')" id="discord" href="discord">Discord</a>
+		<a class="links" onmouseover="bash('absurdismtv')" id="AbsurdismTv" href="./AbsurdismTV/index.html">AbsurdTV</a>
+		<a class="links" onmouseover="bash('archive_project')" id="archiveproject" href="https://www.youtube.com/c/Absurdismworldsarchivechannel/">Youtube d&b archive</a>
+		<a class="links" onmouseover="bash('tnadne')" id="AI" href="./TNADNE/index.html">TNADNE</a>
+		<a class="links" onmouseover="bash('radio')" id="radio" href="radio">Internet radio</a>
+	    <a class="links" onmouseover="bash('flash_lives')" id="archiveproject" href="flashlives">Keep flash alive!</a>
+		<a class="links" onmouseover="bash('website_basics')" id="websitebasics" href="flashlives">Website basics</a>
+		<a class="links" onmouseover="bash('webrings')" id="webrings" href="flashlives">Webrings & cool websites</a>
     </div>
     <div class="entertheabsurd">
         <a href="check" id="enter">Enter the Absurd</a>
@@ -49,6 +51,9 @@
 </body>
 
 <script>
+function bash(text) {
+    document.getElementById("bash").innerHTML = "~$ absurdismworld -page "+text+"<span class=cur>_</span>";
+}
 function titleScroller(text) {
     document.title = text;
     setTimeout(function () {
