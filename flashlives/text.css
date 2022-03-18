@@ -1,0 +1,27 @@
+p {
+    font-family: Love Letter;
+	font-size:100%;
+    color:#d2738a;
+}
+
+sa {
+	font-family: Love Letter;
+    font-size:175%;
+    color:#d2738a;
+}
+
+saa {
+	font-family: Love Letter;
+    font-size:125%;
+    color:#d2738a;
+}
+
+.someone {
+	position:fixed;
+    bottom:0;
+    right:0;
+}
+
+@font-face {
+  font-family: "Love Letter";
+  src: url('./LoveLetter.TTF') format('truetype');
