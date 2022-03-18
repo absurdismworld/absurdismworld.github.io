@@ -1,0 +1,3 @@
+remove these lines, there's probably other ways to do this.
+this.editor = new HuesEditor(this, this.window)
+t.addTab("RESOURCES", this.root)
