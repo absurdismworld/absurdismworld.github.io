@@ -2,9 +2,6 @@
 body {
     font-size: 35px;
     background-image: url("./bg205.gif");
-    animation: scroll 14s infinite;
-    animation-timing-function: linear;
-    image-rendering: pixelated;
 }
 body * {
     box-sizing: border-box;
