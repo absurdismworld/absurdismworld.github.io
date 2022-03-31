@@ -22,6 +22,17 @@ saa {
     right:0;
 }
 
+html {
+	background-color: #000;
+	color: #FFF;
+	font-family: "Love Letter";
+	font-size: 18px;
+}
+
+h1 {
+	font-family: Love Letter;
+}
+
 @font-face {
   font-family: "Love Letter";
   src: url('./LoveLetter.TTF') format('truetype');

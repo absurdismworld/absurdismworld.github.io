@@ -3,10 +3,10 @@
 <head>
 <title>About</title>
 </head>
-
+<script src="./js/jquery.js"></script><script src="./js/howler.js"></script><script src="./js/dummycookie.js"></script>
 <body>
 <body bgcolor="#000000" background="bg205.gif">
-<link rel="stylesheet" href="text.css">
+<link rel="stylesheet" href="text.css" href="./reset.css"> 
 <p><i>Heya anon, welcome to my own little corner of the internet.</i><br></p>
 <br>
 <sa>About me:</sa><br>
@@ -37,11 +37,11 @@ Well since you asked so nicely.<br>
 <b>AbsurdTV</b> - A collection of clips all around the internet worth viewing and saving.<br>
 <b>Youtube d&b archive</b> - Self-explanatory.<br>
 <b>TNADNE</b> - A repository of AI generated neco arcs. What's a neco arc? Google it.<br>
-<b>Keep flash alive!</b> - An info dump about using flash in $CURRENT_YEAR$. Still under construction.<br>
+<b>Keep flash alive!</b> - An info dump about using flash in $CURRENT_YEAR$.<br>
 <b>Internet radio</b> - My own internet radio station. Active, page is being worked on.<br>
 <b>Website basics</b> - The basics of making your own website. Still under construction.<br>
 <b>Enter the absurd</b> - Depreciated. A yume nikki styled internet web maze.<br>
-<b>Webring & cool websites</b> - Self-explanatory. Still under construction.<br>
+<b>Webring & cool websites</b> - Self-explanatory.<br>
 <br></p>
 <p><u>Will you keep this page up for ever and ever?</u><br>
 Probably not. Nothing lasts forever.<br>
@@ -49,8 +49,14 @@ Probably not. Nothing lasts forever.<br>
 <u>Can I help out with your website?</u><br>
 Maybe. Email me and we'll talk.<br>
 <br>
-<u>I want to support you, financially I mean. Where can I do that?</u><br>
-Nowhere yet. Probably nowhere ever, but I love you for wanting to.<br>
+<u>Like what i'm doing and want to financially support me?</u><br>
+<b>Here's some crypto adresses:</b><br>
+BTC: <u>3JZZUst2vfQxhcoUikxzYSFgsJb6DX5u6u</u><br>
+BHC: <u>qpgddjjcg53vvwkxqkjdr5kvwr5p6pumnssa0z8vhp</u><br>
+Zcash: <u>t1fQTapgbd2wvG9kp4LiNY9J35kMkzjihCX</u><br>
+Ethereum: <u>0xb3D29b69a2e3A4dBC5F270D0399B14fc74A464d8</u><br>
+Monero: <u>41fZvLiAd7ySbYXwTtiTEsPbTeF1bfZwJJixm1CcTPUJMddkaNtUnczDPPhWYDomqyJ7sc1XFjdXFewpBYQVacinJFfgRBP</u><br>
+Any and all donations are very much appricated and never necessary :)<br>
 <br>
 <u>I HAVE MORE QUESTIONS!</u><br>
 Again, discord server or email me here: <a href="mailto:absurdismworld@waifu.club">absurdismworld@waifu.club/</a><br></p>
@@ -84,3 +90,116 @@ function play() {
 </script>
 </div>
 </body>
+
+<script>		
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			var intro = new Howl({
+				src: "./scan.mp3",
+				volume: 0.5,
+				loop: false
+			});
+
+			if (getCookie("seenintro") !== "yes3") {
+				window.addEventListener("load", function(event) {
+					intro.play();
+					intro.on('play', function(){
+						PlayText();
+						$("#intro").addClass("ready");
+						setTimeout(function(){ window.scrollTo(0, 0); }, 1700);
+						setTimeout(function(){ $("#intro").addClass("seenn"); }, 1700);
+					});
+
+					$("#intro h6").click(function(){
+						$("#intro").hide();
+					});
+				});
+			} else {
+				$("#intro").hide();
+				window.addEventListener("load", function(event) {
+					noise.play();
+					bgm.play();
+				});
+			}
+
+			$("#replay").click(function(){
+				location.reload();
+			});
+
+		function PlayText() {
+			setTimeout(function(){ $("#intro h1").html("") }, 100);
+			setTimeout(function(){ $("#intro h1").html("") }, 200);
+			setTimeout(function(){ $("#intro h1").html(".") }, 400);
+			setTimeout(function(){ $("#intro h1").html(".") }, 600);
+			setTimeout(function(){ $("#intro h1").html(".") }, 800);
+			setTimeout(function(){ $("#intro h1").html(". .") }, 1000);
+			setTimeout(function(){ $("#intro h1").html(". .") }, 1200);
+			setTimeout(function(){ $("#intro h1").html(". .") }, 1400);
+			setTimeout(function(){ $("#intro h1").html(". .") }, 1600);
+			setTimeout(function(){ $("#intro h1").html(". . .") }, 1800);
+			setTimeout(function(){ $("#intro h1").html(". . .") }, 2000);
+			setTimeout(function(){ $("#intro h1").html(". . .") }, 2200);
+			setTimeout(function(){ $("#intro h1").html(">") }, 2400);
+			setTimeout(function(){ $("#intro h1").html("Fa|") }, 2500);
+			setTimeout(function(){ $("#intro h1").html("Facia|") }, 2600);
+			setTimeout(function(){ $("#intro h1").html("Facial sc|") }, 2700);
+			setTimeout(function(){ $("#intro h1").html("Facial scan|") }, 2800);
+			setTimeout(function(){ $("#intro h1").html("Facial scan co|") }, 2900);
+			setTimeout(function(){ $("#intro h1").html("Facial scan compl|") }, 3000);
+			setTimeout(function(){ $("#intro h1").html("Facial scan complet|") }, 3100);
+			setTimeout(function(){ $("#intro h1").html("Facial scan complete.") }, 3200);
+			setTimeout(function(){ $("#intro h1").html("Facial scan complete.<br> Acc|") }, 3300);
+			setTimeout(function(){ $("#intro h1").html("Facial scan complete.<br> Access|") }, 3400);
+			setTimeout(function(){ $("#intro h1").html("Facial scan complete.<br> Access gra|") }, 3500);
+			setTimeout(function(){ $("#intro h1").html("Facial scan complete.<br> Access granted.") }, 3600);
+		}
+	});
+	</script>
+	<style>	
+	#intro {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1000000;
+			background-color: #000;
+		}
+
+		#intro h1 {
+			position: fixed;
+			left: calc(50vh);
+			top: calc(15vh);
+			width: 100%;
+			font-family: Love Letter;
+			font-size: 3vw;
+		}
+
+		#intro h6 {
+			position: relative;
+			top: 90vh;
+			cursor: pointer;
+			margin: 0;
+			color: #FFF;
+			opacity: 0.2;
+		}
+
+		#intro.seenn {
+			transition: 7.5s;
+			opacity: 0;
+			pointer-events: none;
+		}
+		</style>
+		
+		<div id="intro">
+		<h1></h1>
+		<center>
+			<h6>Click here to skip or if the preloader has failed to load.</h6>
+		</center>
+	</div>
+	
+	
+	<div class="reload">
+	</div>
+	<center><a id="replay">Reload preloader</span></center>
+</body>
+</html>
