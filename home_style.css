@@ -104,7 +104,7 @@ body * {
     text-align: center;
     background-image: url("./bg.png");
     width: 45rem;
-    height: 5rem;
+    height: 2rem;
     box-shadow: 0px 0px 1rem rgba(0,0,0,0.4) inset;
     justify-content: center;
     border-radius: .4rem;
@@ -121,7 +121,7 @@ body * {
     font-size: 1rem;
     color: white;
     display: block;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     text-decoration: none !important;
 	
@@ -189,6 +189,14 @@ a {
     margin: auto auto 1rem;
     text-align: center;
 }
+#quoteDisplay {
+	display: block;
+    font-size: 1rem;
+    color: white;
+    margin: auto auto 1rem;
+    text-align: center;
+	width: 100%;
+}
 @keyframes widen {
     from {
         filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.5));
@@ -217,20 +225,20 @@ a {
 }
 @media (min-width: 1400px) {
     #screensize::after {
-        content: "Perfect";
+        content: "Good";
         color: rgb(46, 255, 46);
     }
 }
 @media (max-width: 1400px) {
     #screensize::after {
-        content: "Good";
-        color: lightgreen;
+        content: "Small (elements might appear broken, zoom out with browser zoom)";
+        color: Orange;
     }
 }
 @media (max-width: 1000px) {
     #screensize::after {
-        content: "Pretty small";
-        color: lightgray;
+        content: "Too small (elements will appear broken, zoom out with browser zoom)";
+        color: red;
     }
     .entertheabsurd {
         width: 30rem;
@@ -244,8 +252,8 @@ a {
         margin: 0;
     }
     #screensize::after {
-        content: "Tiny";
-        color: lightsalmon;
+        content: "Too small (elements will appear broken, zoom out with browser zoom)";
+        color: darkred;
     }
     .entertheabsurd {
         width: 25rem;
@@ -263,7 +271,7 @@ a {
 }
 @media (max-width: 300px) {
     #screensize::after {
-        content: "Minuscule";
+        content: "Unusable";
     }
 }
 @media (max-width: 100px) {

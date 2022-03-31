@@ -16,8 +16,7 @@
     <div class="minibar">
         <span id="screensize">Your display size is: </span> - <span onclick="play()" id="play">Show music player</span>
     </div>
-	<div class="minibar">
-	<id="quote"> “If you’re not remembered, then you never existed.”
+	<div id="quoteDisplay">
 	</div>
     <div class="buttons">
         <span class="bash" id="bash">~$ tip: scroll for more<span class="cur">_</span></span>
@@ -30,7 +29,7 @@
 		<a class="links" onmouseover="bash('tnadne')" id="AI" href="./TNADNE/index.html">TNADNE</a>
 	    <a class="links" onmouseover="bash('flash_lives')" id="archiveproject" href="flashlives">Keep flash alive!</a>
 		<a class="links" onmouseover="bash('website_basics')" id="websitebasics" href="/">Website basics</a>
-		<a class="links" onmouseover="bash('webrings')" id="webrings" href="/">Webrings & cool websites</a>
+		<a class="links" onmouseover="bash('webrings')" id="webrings" href="webrings">Webrings & cool websites</a>
     </div>
     <div class="entertheabsurd">
         <a href="check" id="enter">Enter the Absurd</a>
@@ -103,4 +102,16 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+</script>
+
+<script>
+var quotes = ["&quot;If you’re not remembered, then you never existed.&quot;", "&quot;No matter where you go, everyone's connected.&quot;", "&quot;People only have substance within the memories of other people.&quot;", "&quot;The body exists only to verify one's own existence.&quot;", 
+"&quot;To live is the rarest thing in the world. Most people just exist.&quot;", "&quot;God was a dream of good government.&quot;", "&quot;The individual desires judgment. Without that desire, the cohesion of groups is impossible, and so is civilization.&quot;",
+"&quot;To be desired is perhaps the closest anybody in this life can reach to feeling immortal.&quot;"];
+
+function newQuote() {
+  var randomNumber = Math.floor(Math.random() * quotes.length);
+  document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+}
+newQuote();
 </script>
