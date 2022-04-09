@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>normal neco-arc</title>
+</head>
+<body class="flexcenter big hell">
+    <div class="big absolute noise"></div>
+    <img id="neco" src="./curse.png" class="cool blend" draggable="false">
+</body>
+</html>
+
+<style>
+    .flexcenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .big{
+        padding: 0;
+        margin: 0;
+        border: none;
+        width: 100vw;
+        height: 100vh;
+    }
+    .hell {
+        background: rgb(68,0,0);
+        background: radial-gradient(circle, rgba(68,0,0,1) 0%, rgba(0,0,0,1) 100%);
+    }
+    .noise {
+        background-image: url(./noise.gif);
+        opacity: 10%;
+        filter: blur(3px);
+    }
+    .overlay {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .blend {
+        mix-blend-mode:soft-light;
+    }
+    .absolute {
+        position: absolute;
+    }
+    .cool {
+        height: 40%;
+        user-select: none;
+        
+    }
+
+</style>
+<script>
+function generateRandom(min = 0, max = 100) {
+let difference = max - min;
+let rand = Math.random();
+rand = Math.floor( rand * difference);
+rand = rand + min;
+return rand;
+}
+
+function funcol(){
+    document.getElementById("neco").style.filter = "drop-shadow("+generateRandom(-2, 2)+"px "+generateRandom(-2, 2)+"px red) drop-shadow("+generateRandom(-2, 2)+"px "+generateRandom(-2, 2)+"px blue) drop-shadow(13px 13px 20px black)";
+    document.getElementById("neco").style.transform = "translateX("+generateRandom(-1, 1)+"px) translatey("+generateRandom(-1, 1)+"px)";
+}
+x = setInterval(funcol, 30);
+</script>
