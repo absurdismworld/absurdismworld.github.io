@@ -1,3 +1,7 @@
+body {
+    background-image: url(bg205.gif);
+    background-color: #000000;
+}
 .videoInsert {
 
 	display: block;
@@ -29,3 +33,4 @@ ot {
 @font-face {
   font-family: "Love Letter";
   src: url('./LoveLetter.TTF') format('truetype');
+}

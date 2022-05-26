@@ -1,0 +1,24 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    display: flex;
+}
+
+#fish {
+    width: 100vw;
+    height: calc(100vh - 5px);
+    max-width: 1280px;
+    max-height: 720px;
+    z-index: 10000;
+    cursor: pointer;
+}
+.container {
+    display: block;
+    margin: auto;
+    padding: 0;
+}
