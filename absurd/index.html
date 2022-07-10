@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Absurd</title>
+</head>
+
+<body>
+    <div id="click2start">
+        <h3>Click anywhere to continue.</h3>
+        <small>(Note: this project has been deprecated.)</small>
+    </div>
+    <div id="a-frame">
+        <iframe id="a-display"></iframe>
+    </div>
+</body>
+
+<script>
+    let adisp = document.getElementById("a-display");
+    document.getElementById("click2start").onclick = function(){
+        document.getElementById("click2start").style.display = "none";
+        adisp.allow = "autoplay";
+        adisp.src = "./start/index.html";
+    }
+</script>
+
+<style>
+    #click2start {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgb(12, 12, 12);
+        z-index: 999;
+    }
+    #click2start h3 {
+        display: block;
+        color: white;
+        font-family: monospace;
+        font-size: 30px;
+    }
+    #click2start small {
+        display: block;
+        color: white;
+        font-size: 22;
+    }
+    #a-frame {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+    }
+    #a-display {
+        display: block;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border: none;
+    }
+</style>
