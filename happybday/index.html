@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>birthday-time!!</title>
+</head>
+<body>
+    <div id="bdc">
+        <div id="sizer">
+            <h1>Happy birthday Darkot and Rai!!! :D</h1>
+            <div><img src="./kot.jpg"><img src="./rai.jpg"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        background-image: url(https://absurdismworld.cc/bg205.gif);
+    }
+    body > * {
+        filter: drop-shadow(3px 3px 25px rgba(255, 106, 106, 0.2));
+    }
+    @keyframes fade-in {
+        from {opacity: 0%; letter-spacing: 8px;}
+        to {opacity: 100%; letter-spacing: 0px;}
+    }
+    @keyframes rotate {
+        from{
+            transform: perspective(600px) rotateY(-90deg) rotateX(20deg);
+        }
+        to{
+            transform: perspective(600px) rotateY(90deg) rotateX(20deg);
+            perspective: 100px;
+        }
+    }
+    #bdc {
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        animation: fade-in 12s;
+    }
+    #bdc h1 {
+        color: white;
+        font-family: monospace;
+        animation: rotate 4s linear infinite;
+    }
+    img {
+        animation: rotate 8s ease-in-out infinite;
+    }
+    #sizer {
+        display: flex;
+        width: 900px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
