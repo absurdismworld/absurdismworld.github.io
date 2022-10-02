@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="forum.css">
+<p style="text-align:center">It's dead.</p>
+
+<div id="swf" class="ded"></div>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+	window.RufflePlayer.config = {
+	    "autoplay": "on",
+		"unmuteOverlay": "hidden",
+		"warnOnUnsupportedContent": false,
+		"showSwfDownload": false,
+		"preloader": false,
+		"contextMenu": false,
+		}
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("swf");
+        container.appendChild(player);
+        player.load("./SadWolf.swf");
+
+    });
+</script>
+<script src="./ruffle.js"></script>
