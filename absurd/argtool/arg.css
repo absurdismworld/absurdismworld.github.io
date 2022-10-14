@@ -67,3 +67,16 @@ html > * {
     background-size: contain;
     background-position: center;
 }
+
+.limit-size {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.no-click {
+    pointer-events: none;
+}
+
+.pixelated {
+    image-rendering: pixelated;
+}
