@@ -26,8 +26,12 @@ html {
 	background-color: #000;
 	color: #FFF;
 	font-family: "Love Letter";
-	font-size: 18px;
+	font-size: 100%;
+	background-image: url('/bg205.gif');
+	background-repeat: repeat;
 }
+/*this is a terrible solution for this*/
+/*i don't care*/
 
 h1 {
 	font-family: Love Letter;
@@ -36,3 +40,4 @@ h1 {
 @font-face {
   font-family: "Love Letter";
   src: url('./LoveLetter.TTF') format('truetype');
+}
